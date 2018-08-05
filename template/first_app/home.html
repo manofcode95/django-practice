@@ -1,0 +1,10 @@
+{% extends 'first_app/base.html '%}
+  {% load extra_filter%}
+  {% block body %}
+    <div class="jumbotron">
+      <h1 class="display-4">Hello, world!</h1>
+      <p class="lead">Click here to contact!</p>
+      <a class="btn btn-primary btn-lg" href="{% url 'form'%}" role="button">Contact</a>
+      <h3>{{context_dict|addy}}</h3>
+    </div>
+  {% endblock %}

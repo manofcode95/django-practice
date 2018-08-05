@@ -1,0 +1,18 @@
+{% extends 'first_app/base.html '%}
+  {% block body %}
+    <h1>Employees's phonenumber list</h1>
+    {% if emp_phones %}
+    <table>
+      <thead>
+        <th>Name</th>
+        <th>Phone Number</th>
+      </thead>
+      {% for x in emp_phones %}
+        <tr>
+          <td>{{x.name}}</td>
+          <td>{{x}}
+        </tr>
+      {% endfor %}
+    </table>
+    {% endif %}
+  {% endblock %}
